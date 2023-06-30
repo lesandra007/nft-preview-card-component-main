@@ -1,0 +1,177 @@
+:root{
+    --clr-soft-blue: hsl(215, 51%, 70%);
+    --clr-cyan: hsl(178, 100%, 50%);
+    --clr-dark-blue-1: hsl(217, 54%, 11%);
+    --clr-dark-blue-2: hsl(216, 50%, 16%);
+    --clr-dark-blue-3: hsl(215, 32%, 27%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --fs-paragraph: 18px;
+    --fw-regular: 300;
+    --fw-bold: 500;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+*/
+html, body {
+    height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+  
+body{
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--clr-dark-blue-1);
+    display: grid;
+    place-content: center;
+    color: var(--clr-soft-blue);
+    font-size: var(--fs-paragraph);
+    font-weight: var(--fw-regular);
+}
+
+.card{
+    width: 350px;
+    background-color: var(--clr-dark-blue-2);
+    padding: 24px;
+    border-radius: 20px;
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+}
+
+.main-img{
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    display: none;
+}
+
+.main-img:hover .overlay{
+    display: block;
+    cursor: pointer;
+}
+
+.overlay img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header{
+    color: var(--clr-white);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.header:hover, .header:focus-visible{
+    color: var(--clr-cyan);
+}
+
+.stats{
+    display: flex;
+    justify-content: space-between;
+    height: 1.5rem;
+    align-items: center;
+    font-weight: var(--fw-bold);
+}
+
+.eth-stat{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    color: var(--clr-cyan);
+}
+
+.line{
+    height: 1px;
+    background: var(--clr-dark-blue-3);
+}
+.u-flex{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.cirBorder{
+    border: 1px solid var(--clr-white);
+    border-radius: 100%;
+    display: inline-block;
+}
+
+.pfp {
+    aspect-ratio: 1/1;
+    width: 2rem;
+    border: 5px solid --clr-white;
+}
+
+.artist{
+    color: var(--clr-white);
+    cursor: pointer;
+}
+
+.artist:hover, button:focus-visible{
+    color: var(--clr-cyan);
+}
+
