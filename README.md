@@ -39,8 +39,6 @@ Users should be able to:
 
 How to overlay images:
 
-To see how you can add code snippets, see below:
-
 ```html
 <div class="cube">
         <article class="main-img">
@@ -87,8 +85,6 @@ To see how you can add code snippets, see below:
 
 - [Solution by Mr. Coder](https://youtu.be/l6sxh57ifSQ) - This helped me implement the overlay images.
 - [Solution by TsbSankara](https://youtu.be/9bGbykdR4T8) - This helped me implement the overlay images.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
